@@ -30,10 +30,11 @@ nav {
   width:200px;
   border-radius:5px;
   margin-top:20px;
+  position:relative;
 }
 
-.mm {position:relative;}
 .mm>li {
+  border-bottom:1px solid #ccc;
   display:block;
   float:left;
   clear:left;
@@ -48,19 +49,19 @@ nav {
   background-color:rgb(0,0,200);
 }
 
-.mm>li+ul {
+.mm>li>ul {
   display:none;
+  background-color:white;
 }
+ .mm>li:hover>ul {
+   display:block;
+ }
 
-.mm>li:hover+ul,
-.mm>li:focus+ul {
-  display:block;
-}
+ .mm>li>ul>li {
+   position:relative;
+   list-style-type:none;
+ }
 
-.sm {
-  position:absolute;
-  display:block;
-  float:left;
-  clear:left;
-  line-height:30px;
-}
+ .mm>li>ul>li:hover {
+   background-color:yellow;
+ }
